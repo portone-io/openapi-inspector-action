@@ -1,0 +1,15 @@
+name: 'OpenAPI Inspector'
+description: 'Validate the changes between two OpenAPI specfications.'
+inputs:
+  original-spec:
+    description: 'The yaml file path of the original specification.'
+    required: true
+  changed-spec:
+    description: 'The yaml file path of the changed specification.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.original-spec }}
+    - ${{ inputs.changed-spec }}
