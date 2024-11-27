@@ -23,7 +23,7 @@ jobs:
         with:
           path: 'changed'
 
-      - uses: doohochang/openapi-diff-action@v0.1.2
+      - uses: portone-io/openapi-inspector-action@v0.2.0
         with:
           original-spec: 'original/your/spec/path/openapi.yml'
           changed-spec: 'changed/your/spec/path/openapi.yml'
